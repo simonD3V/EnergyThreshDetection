@@ -8,7 +8,7 @@ def freq_max(idx, c, thresh):
 
 class EnergyThresholdDetector:
 
-    def __init__(self, sr, thresholds): 
+    def __init__(self, sr = 16000, thresholds = [0.97]): 
         self.sr = sr
         self.thresholds = thresholds
     
