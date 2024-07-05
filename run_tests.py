@@ -2,16 +2,17 @@ import unittest
 
 import numpy as np
 import librosa
-from energy_threshold_detector import EnergyThresholdDetector
+from bandwidthdetection import BandwidthDetector
 
-class TestEnergyThreshDetection(unittest.TestCase):
+
+class TestBandwidthDetection(unittest.TestCase):
     
     def test_init(self):
-        EnergyThresholdDetector()
+        BandwidthDetector()
 
     def test_execution(self):
         medianame = "./audiofiles/poeme_full.wav"
-        etd = EnergyThresholdDetector()
+        etd = BandwidthDetector()
         etd(medianame)
 
     def test_damaged_thresh(self):
@@ -20,12 +21,12 @@ class TestEnergyThreshDetection(unittest.TestCase):
         
         medianame = "./audiofiles/poeme_damaged.wav"
         
-        etd = EnergyThresholdDetector(
+        bwd = BandwidthDetector(
             sr=16000, 
             thresholds=[thresh]
         )
         
-        output = etd(medianame, uem=[(2, 12)])
+        output = bwd(medianame, uem=[(2, 12)])
         res = output["frequencies"][0]
         
         np.testing.assert_almost_equal(

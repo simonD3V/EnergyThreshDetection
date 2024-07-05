@@ -8,7 +8,7 @@ def freq_max(idx, c, thresh):
     return i[0]
 
 
-class EnergyThresholdDetector:
+class BandwidthDetector:
 
     def __init__(self, sr = 16000, thresholds = [0.97]): 
         self.sr = sr
@@ -57,4 +57,3 @@ class EnergyThresholdDetector:
             res = res[0]
         
         return res
-            

@@ -13,14 +13,14 @@ DESCRIPTION='Signal processing tool to detect the maximum energy threshold of on
 LONGDESCRIPTION='Energy above a certain threshold may be lost due to compression manipulations (typically occurs when converting wav to mp3 to wav). This loss can be easily identified for a given sampling rate by examining the maximum frequency obtained for a percentage of the signal energy.'
 
 setup(
-    name = "EnergyThresholdDetection",
+    name = "BandwidthDetection/",
     version = "0.1.7",
     author = "Simon Devauchelle",
     author_email = "devausimon@gmail.com",
     test_suite="run_test.py",
     description = DESCRIPTION,
     install_requires=["librosa"],
-    url = "https://github.com/simonD3V/EnergyThreshDetection",
+    url = "https://github.com/simonD3V/bandwidth-detection",
     keywords = KEYWORDS,
     packages = find_packages(),
     include_package_data = True,
