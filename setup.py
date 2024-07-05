@@ -19,7 +19,7 @@ setup(
     author_email = "devausimon@gmail.com",
     test_suite="run_test.py",
     description = DESCRIPTION,
-    install_requires=["numpy==1.26.0", "librosa", "scipy"],
+    install_requires=["librosa"],
     url = "https://github.com/simonD3V/EnergyThreshDetection",
     keywords = KEYWORDS,
     packages = find_packages(),
