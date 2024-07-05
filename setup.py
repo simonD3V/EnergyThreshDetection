@@ -13,8 +13,8 @@ DESCRIPTION='Signal processing tool to detect the maximum energy threshold of on
 LONGDESCRIPTION='Energy above a certain threshold may be lost due to compression manipulations (typically occurs when converting wav to mp3 to wav). This loss can be easily identified for a given sampling rate by examining the maximum frequency obtained for a percentage of the signal energy.'
 
 setup(
-    name = "BandwidthDetection/",
-    version = "0.1.7",
+    name = "BandwidthDetection",
+    version = "0.1.0",
     author = "Simon Devauchelle",
     author_email = "devausimon@gmail.com",
     test_suite="run_test.py",
