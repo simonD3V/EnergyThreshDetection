@@ -13,7 +13,7 @@ DESCRIPTION='Signal processing tool to detect the maximum energy threshold of on
 
 setup(
     name = "EnergyThresholdDetection",
-    version = "0.1.1",
+    version = "0.1.2",
     author = "Simon Devauchelle",
     author_email = "devausimon@gmail.com",
     test_suite="run_test.py",
