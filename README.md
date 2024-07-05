@@ -11,7 +11,7 @@ Energy above a certain threshold may be lost due to compression manipulations (t
 
 ## PIP installation (in progress)
 ```bash 
-=$ virtualenv -p python3 env
+$ virtualenv -p python3 env
 $ source env/bin/activate
 
 # install framework and dependencies
