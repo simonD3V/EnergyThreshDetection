@@ -14,7 +14,7 @@ LONGDESCRIPTION='Energy above a certain threshold may be lost due to compression
 
 setup(
     name = "EnergyThresholdDetection",
-    version = "0.1.6",
+    version = "0.1.7",
     author = "Simon Devauchelle",
     author_email = "devausimon@gmail.com",
     test_suite="run_test.py",
