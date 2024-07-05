@@ -4,7 +4,7 @@ Signal processing tool to detect the maximum energy threshold of one or more aud
 
 Energy above a certain threshold may be lost due to compression manipulations (typically when converting wav :arrow_right: mp3 :arrow_right: wav). This loss can be easily identified for a given sampling rate by examining the maximum frequency obtained for a percentage of the signal energy.  
 
-* Example of __damaged__ signal :
+* Example of _damaged_ signal :
 
 ![Damaged signal (10s long excerpt) ](/images/sig.png)
 ![Corresponding spectrogram (10s long excerpt) ](/images/spectrogram.png)
@@ -20,4 +20,5 @@ $ pip install EnergyThreshDetection
 ```
 
 ### Audio files from LibriVox
-https://librivox.org/compilation-de-poemes-007-by-various
+["Demain dès l'aube" (V. HUGO, 1856) read by __Ezwa__.](https://librivox.org/compilation-de-poemes-007-by-various)
+
