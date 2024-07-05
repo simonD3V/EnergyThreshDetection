@@ -19,7 +19,7 @@ setup(
     author_email = "devausimon@gmail.com",
     test_suite="run_test.py",
     description = DESCRIPTION,
-    install_requires=["librosa==0.10.2.post1"],
+    install_requires=["librosa"],
     url = "https://github.com/simonD3V/EnergyThreshDetection",
     keywords = KEYWORDS,
     packages = find_packages(),
