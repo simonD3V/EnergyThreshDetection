@@ -10,32 +10,29 @@ class TestEnergyThreshDetection(unittest.TestCase):
         EnergyThresholdDetector()
 
     def test_execution(self):
-        y_full, sr = librosa.load("./audiofiles/poeme_full.wav", sr=16000)
-        etd = EnergyThresholdDetector(
-                sr=sr, 
-                thresholds=[0.99]
-        )
-        etd(y_full)
+        medianame = "./audiofiles/poeme_full.wav"
+        etd = EnergyThresholdDetector()
+        etd(medianame)
 
     def test_damaged_thresh(self):
         thresh = 0.99
         damaged_freq = 5884.1
         
-        y_damaged, sr = librosa.load("./audiofiles/poeme_damaged.wav", sr=16000)
+        medianame = "./audiofiles/poeme_damaged.wav"
         
-        # 10s selection
-        y_damaged = y_damaged[sr*2:sr*12]
-
         etd = EnergyThresholdDetector(
-                sr=sr, 
-                thresholds=[thresh]
+            sr=16000, 
+            thresholds=[thresh]
         )
-        res = etd(y_damaged)
+        
+        output = etd(medianame, uem=[(2, 12)])
+        res = output["frequencies"][0]
+        
         np.testing.assert_almost_equal(
-                res[0],
-                damaged_freq,
-                decimal=2,
-                err_msg="Frequencies are not equal (thresh : %f)" % thresh
+            res[1],
+            damaged_freq,
+            decimal=2,
+            err_msg="Frequencies are not equal (thresh : %f)" % thresh
         )
 
 
