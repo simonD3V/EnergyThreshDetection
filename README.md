@@ -1,4 +1,4 @@
-# :signal_strength: BandWidthDetection
+# :signal_strength: BandwidthDetection
 
 Signal processing tool to detect the maximum energy threshold of one or more audio files. 
 
@@ -15,7 +15,7 @@ $ virtualenv -p python3 env
 $ source env/bin/activate
 
 # install framework and dependencies
-$ pip install EnergyThreshDetection
+$ pip install bandwidth-detection
 ```
 
 ### Audio files from LibriVox
