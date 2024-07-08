@@ -35,8 +35,9 @@ class BandwidthDetector:
         for (start, stop) in uem :
         
             # Discrete fast fourier transform
-            yf = fft(y[start * sr:stop * sr])
-            n = len(y[start * sr:stop * sr])
+            _y = y[int(start * sr):int(stop * sr)]
+            yf = fft(_y)
+            n = len(_y)
             
             spectrum = abs(yf)[:(n // 2)]
             idx = np.array(range(len(spectrum))) * sr / n
@@ -47,8 +48,9 @@ class BandwidthDetector:
             frequencies = [freq_max(idx, c, t) for t in self.thresholds]
 
             res.append({
-                "start":start, 
-                "stop":stop, 
+                "start":int(start * sr), 
+                "stop":int(stop * sr),
+                "sampling rate":sr,
                 "frequencies":[tup for tup in zip(self.thresholds, frequencies)]
             })
             
