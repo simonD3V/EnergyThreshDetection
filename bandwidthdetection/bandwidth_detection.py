@@ -27,7 +27,7 @@ class BandwidthDetector:
         sr, y = wavfile.read(medianame)
 
         if len(uem) == 0 :
-            uem = [(0, len(y))]
+            uem = [(0, len(y)/sr)]
 
         res = []
 
