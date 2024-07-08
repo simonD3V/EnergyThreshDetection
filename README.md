@@ -15,7 +15,7 @@ $ virtualenv -p python3 env
 $ source env/bin/activate
 
 # install framework and dependencies
-$ pip install bandwidth-detection
+$ pip install bandwidthdetection
 ```
 
 ### Audio files from LibriVox
