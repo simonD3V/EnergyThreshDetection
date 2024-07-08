@@ -6,21 +6,22 @@ import os
 from setuptools import setup, find_packages
 
 KEYWORDS = '''
-maximum energy thresholds
+energy
+bandwidth detection
 '''.strip().split('\n')
 
 DESCRIPTION='Signal processing tool to detect the maximum energy threshold of one or more audio files'
 LONGDESCRIPTION='Energy above a certain threshold may be lost due to compression manipulations (typically occurs when converting wav to mp3 to wav). This loss can be easily identified for a given sampling rate by examining the maximum frequency obtained for a percentage of the signal energy.'
 
 setup(
-    name = "bandwidth-detection",
-    version = "0.1.1",
+    name = "bandwidthdetection",
+    version = "0.2.0",
     author = "Simon Devauchelle",
     author_email = "devausimon@gmail.com",
     test_suite="run_test.py",
     description = DESCRIPTION,
     install_requires=["librosa"],
-    url = "https://github.com/simonD3V/bandwidth-detection",
+    url = "https://github.com/simonD3V/bandwidthdetection",
     keywords = KEYWORDS,
     packages = find_packages(),
     include_package_data = True,
