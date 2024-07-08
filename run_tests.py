@@ -17,12 +17,11 @@ class TestBandwidthDetection(unittest.TestCase):
 
     def test_damaged_thresh(self):
         thresh = 0.99
-        damaged_freq = 5884.1
+        damaged_freq = 5885.3
         
         medianame = "./audiofiles/poeme_damaged.wav"
         
         bwd = BandwidthDetector(
-            sr=16000, 
             thresholds=[thresh]
         )
         
