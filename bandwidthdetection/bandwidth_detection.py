@@ -1,5 +1,5 @@
 import numpy as np
-import librosa
+from scipy.io import wavfile
 from scipy.fft import fft
 
 
@@ -10,8 +10,7 @@ def freq_max(idx, c, thresh):
 
 class BandwidthDetector:
 
-    def __init__(self, sr = 16000, thresholds = [0.97]): 
-        self.sr = sr
+    def __init__(self, thresholds = [0.97]): 
         self.thresholds = thresholds
     
     def __call__(self, medianame, uem=[]):
@@ -25,7 +24,7 @@ class BandwidthDetector:
         """
 
         # Load signal
-        y, sr = librosa.load(medianame, sr=self.sr)
+        sr, y = wavfile.read(medianame)
 
         if len(uem) == 0 :
             uem = [(0, len(y))]
@@ -40,7 +39,7 @@ class BandwidthDetector:
             n = len(y[start * sr:stop * sr])
             
             spectrum = abs(yf)[:(n // 2)]
-            idx = np.array(range(len(spectrum))) * self.sr / n
+            idx = np.array(range(len(spectrum))) * sr / n
     
             # Cumulated sum of energy
             feat = np.sqrt(spectrum)
