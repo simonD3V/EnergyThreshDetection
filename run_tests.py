@@ -2,18 +2,18 @@ import unittest
 
 import numpy as np
 import librosa
-from bandwidthdetection import BandwidthDetector
+from bandwidthestimation import BandwidthEstimator
 
 
-class TestBandwidthDetection(unittest.TestCase):
+class TestBandwidthEstimation(unittest.TestCase):
     
     def test_init(self):
-        BandwidthDetector()
+        BandwidthEstimator()
 
     def test_execution(self):
         medianame = "./audiofiles/poeme_full.wav"
-        etd = BandwidthDetector()
-        etd(medianame)
+        bwe = BandwidthEstimator()
+        bwe(medianame)
 
     def test_damaged_thresh(self):
         thresh = 0.99
@@ -21,11 +21,11 @@ class TestBandwidthDetection(unittest.TestCase):
         
         medianame = "./audiofiles/poeme_damaged.wav"
         
-        bwd = BandwidthDetector(
+        bwe = BandwidthEstimator(
             thresholds=[thresh]
         )
         
-        output = bwd(medianame, uem=[(2, 12)])
+        output = bwe(medianame, uem=[(2, 12)])
         res = output["frequencies"][0]
         
         np.testing.assert_almost_equal(

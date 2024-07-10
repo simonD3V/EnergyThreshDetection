@@ -8,7 +8,7 @@ def freq_max(idx, c, thresh):
     return i[0]
 
 
-class BandwidthDetector:
+class BandwidthEstimator:
 
     def __init__(self, thresholds = [0.97]): 
         self.thresholds = thresholds
