@@ -9,9 +9,9 @@ Energy above a certain threshold may be lost due to compression manipulations (t
 ![Damaged signal (10s long excerpt) ](/images/sig.png)
 ![Corresponding spectrogram (10s long excerpt) ](/images/spectrogram.png)
 
-## PIP installation (in progress)
+## PIP installation
 ```bash 
-$ virtualenv -p python3 env
+$ python3 -m venv venv
 $ source env/bin/activate
 
 # install framework and dependencies
