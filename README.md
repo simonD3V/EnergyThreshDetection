@@ -1,6 +1,6 @@
-# :signal_strength: BandwidthDetection
+# :signal_strength: BandwidthEstimation
 
-Signal processing tool to detect the maximum energy threshold of one or more audio files. 
+Signal processing tool to estimate the maximum energy threshold of one or more audio files. 
 
 Energy above a certain threshold may be lost due to compression manipulations (typically occurs when converting wav :arrow_right: mp3 :arrow_right: wav). This loss can be easily identified for a given sampling rate by examining the maximum frequency obtained for a percentage of the signal energy.  
 
@@ -15,7 +15,7 @@ $ virtualenv -p python3 env
 $ source env/bin/activate
 
 # install framework and dependencies
-$ pip install bandwidthdetection
+$ pip install bandwidthestimation
 ```
 
 ### Audio files from LibriVox
