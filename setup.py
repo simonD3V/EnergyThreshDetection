@@ -15,7 +15,7 @@ LONGDESCRIPTION='Energy above a certain threshold may be lost due to compression
 
 setup(
     name = "bandwidthestimation",
-    version = "0.1.1",
+    version = "0.1.0",
     author = "Simon Devauchelle",
     author_email = "devausimon@gmail.com",
     test_suite="run_test.py",
